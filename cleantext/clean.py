@@ -20,9 +20,6 @@ log = logging.getLogger()
 from unicodedata import normalize
 
 unidecode = lambda x: normalize("NFD", x).encode("ASCII", "ignore").decode("utf-8")
-log.warning(
-    "Since the GPL-licensed package `unidecode` is not installed, using Python's `unicodedata` package which yields worse results."
-)
 
 
 def fix_strange_quotes(text):
